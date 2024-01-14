@@ -2,50 +2,17 @@ package TCs;
 
 import java.util.ArrayList;
 
-class product1 {
-
-	String name;
-	String code;
-	String category;
-	float costPrice;
-	float sellingPrice;
-	float taxPercent;
-	int stockCount;
-
-	product1(String name, String code, String category, float costPrice, float sellingPrice, float taxPercent,
-			int stockCount) {
-		this.name = name;
-		this.code = code;
-		this.category = category;
-		this.costPrice = costPrice;
-		this.sellingPrice = sellingPrice;
-		this.taxPercent = taxPercent;
-		this.stockCount = stockCount;
-	}
-}
-
-class store {
-	String sname;
-	String address;
-	String contact;
-
-	store(String sname, String address, String contact) {
-		this.sname = sname;
-		this.address = address;
-		this.contact = contact;
-	}
-}
-
 class AssignmentFinal {
 
 	public static void main(String[] args) {
 
-		ArrayList<product1> pl = new ArrayList();
+		ArrayList<Product> pl = new ArrayList();
 
 		ArrayList<store> s = new ArrayList();
 
 		ArrayList<String> outputList = new ArrayList<String>();
 
+		// Creating two store objects and 10 products for each store
 		for (int j = 1; j <= 2; j++) {
 			String storename = "Store" + j;
 			String address = "Banglore " + j + "Area";
@@ -66,7 +33,7 @@ class AssignmentFinal {
 					int stockCount = 20 + i;
 
 					// Creating a new Product and adding it to the ArrayList
-					product1 product = new product1(productName, productCode, productCategory, costPrice, sellingPrice,
+					Product product = new Product(productName, productCode, productCategory, costPrice, sellingPrice,
 							taxPercent, stockCount);
 					pl.add(product);
 				}
@@ -82,7 +49,7 @@ class AssignmentFinal {
 					int stockCount = 20 + i + j;
 
 					// Creating a new Product and adding it to the ArrayList
-					product1 product = new product1(productName, productCode, productCategory, costPrice, sellingPrice,
+					Product product = new Product(productName, productCode, productCategory, costPrice, sellingPrice,
 							taxPercent, stockCount);
 					pl.add(product);
 				}
@@ -96,7 +63,7 @@ class AssignmentFinal {
 
 			System.out.println(stor.sname + "\t\t" + stor.address + "\t\t" + stor.contact);
 
-			for (product1 pr : pl) {
+			for (Product pr : pl) {
 
 				if (pr.name.contains(stor.sname)) {
 
@@ -108,36 +75,40 @@ class AssignmentFinal {
 			}
 
 		}
-				String storeNameToSearch = "Store1";
-				String productCodeToSearch = "Store1_Prod9";
+		
+		
 
-				float price = getPriceByCodeInStore(pl, storeNameToSearch, productCodeToSearch);
-				int stockValue = getStockValueByCodeInStore(pl, storeNameToSearch, productCodeToSearch);
+		String storeNameToSearch = "Store1";
+		String productCodeToSearch = "Store1_Prod9";
 
-				System.out.println("Price of product " + productCodeToSearch + " in store " + storeNameToSearch + ": " + price);
-				System.out.println("Stock value of product " + productCodeToSearch + " in store " + storeNameToSearch + ": " + stockValue);
-			}
+		float price = getPriceByCodeInStore(pl, storeNameToSearch, productCodeToSearch);
+		int stockValue = getStockValueByCodeInStore(pl, storeNameToSearch, productCodeToSearch);
 
-			// Function to get the price of a product by code in a store
-			private static float getPriceByCodeInStore(ArrayList<product1> products, String storeName, String productCode) {
-				for (product1 product : products) {
-					if (product.name.contains(storeName) && product.code.equals(productCode)) {
-						return product.sellingPrice;
-					}
-				}
-				return -1; // Indicates that the product with the given code was not found in the specified store
-			}
-
-			// Function to get the stock value of a product by code in a store
-			private static int getStockValueByCodeInStore(ArrayList<product1> products, String storeName, String productCode) {
-				for (product1 product : products) {
-					if (product.name.contains(storeName) && product.code.equals(productCode)) {
-						return product.stockCount;
-					}
-				}
-				return -1; // Indicates that the product with the given code was not found in the specified store
-			}
-
+		System.out.println("Price of product " + productCodeToSearch + " in store " + storeNameToSearch + ": " + price);
+		System.out.println(
+				"Stock value of product " + productCodeToSearch + " in store " + storeNameToSearch + ": " + stockValue);
 	}
 
+	// Creating a function to get price of product by code in a store
+	private static float getPriceByCodeInStore(ArrayList<Product> products, String storeName, String productCode) {
+		for (Product product : products) {
+			if (product.name.contains(storeName) && product.code.equals(productCode)) {
+				return product.sellingPrice;
+			}
+		}
+		return -1; 
+	}
+	
+	
+	// Creating a function to get stock value of a product by code in a store
+	
+	private static int getStockValueByCodeInStore(ArrayList<Product> products, String storeName, String productCode) {
+		for (Product product : products) {
+			if (product.name.contains(storeName) && product.code.equals(productCode)) {
+				return product.stockCount;
+			}
+		}
+		return -1; 
+	}
 
+}
