@@ -1,0 +1,194 @@
+[{
+    "storeName": "Store1",
+    "storeAddress": "Bengaluru",
+    "storeContact": "12345667",
+    "products": [
+        {
+            "name": "Product1",
+            "code": "Prod1",
+            "category": "Category1",
+            "costPrice": 10.0,
+            "sellingPrice": 15.0,
+            "taxPercent": 5.0,
+            "stockCount": 50
+        },
+        {
+            "name": "Product2",
+            "code": "Prod2",
+            "category": "Category2",
+            "costPrice": 12.5,
+            "sellingPrice": 18.0,
+            "taxPercent": 6.0,
+            "stockCount": 40
+        },
+         {
+            "name": "Product3",
+            "code": "Prod3",
+            "category": "Category3",
+            "costPrice": 12.5,
+            "sellingPrice": 18.0,
+            "taxPercent": 6.0,
+            "stockCount": 40
+        },  {
+            "name": "Product4",
+            "code": "Prod4",
+            "category": "Category4",
+            "costPrice": 12.5,
+            "sellingPrice": 18.0,
+            "taxPercent": 6.0,
+            "stockCount": 40
+        },  {
+            "name": "Product5",
+            "code": "Prod5",
+            "category": "Category5",
+            "costPrice": 12.5,
+            "sellingPrice": 18.0,
+            "taxPercent": 6.0,
+            "stockCount": 40
+        },  {
+            "name": "Product6",
+            "code": "Prod6",
+            "category": "Category6",
+            "costPrice": 12.5,
+            "sellingPrice": 18.0,
+            "taxPercent": 6.0,
+            "stockCount": 40
+        },
+          {
+            "name": "Product7",
+            "code": "Prod7",
+            "category": "Category7",
+            "costPrice": 12.5,
+            "sellingPrice": 18.0,
+            "taxPercent": 6.0,
+            "stockCount": 40
+        },
+          {
+            "name": "Product8",
+            "code": "Prod8",
+            "category": "Category8",
+            "costPrice": 12.5,
+            "sellingPrice": 18.0,
+            "taxPercent": 6.0,
+            "stockCount": 40
+        },
+          {
+            "name": "Product9",
+            "code": "Prod9",
+            "category": "Category9",
+            "costPrice": 12.5,
+            "sellingPrice": 18.0,
+            "taxPercent": 6.0,
+            "stockCount": 40
+        },
+          {
+            "name": "Product10",
+            "code": "Prod10",
+            "category": "Category10",
+            "costPrice": 12.5,
+            "sellingPrice": 18.0,
+            "taxPercent": 6.0,
+            "stockCount": 40
+        }
+    ]
+},
+ {
+        "storeName": "Store2",
+        "storeAddress": "BengaluruSouth",
+        "storeContact": "98765432",
+        "products": [
+            {
+                "name": "Product11",
+                "code": "Prod11",
+                "category": "Category11",
+                "costPrice": 15.0,
+                "sellingPrice": 20.0,
+                "taxPercent": 7.0,
+                "stockCount": 35
+            },
+            {
+                "name": "Product12",
+                "code": "Prod12",
+                "category": "Category12",
+                "costPrice": 18.5,
+                "sellingPrice": 25.0,
+                "taxPercent": 8.0,
+                "stockCount": 28
+            },
+               {
+                "name": "Product13",
+                "code": "Prod13",
+                "category": "Category13",
+                "costPrice": 18.5,
+                "sellingPrice": 25.0,
+                "taxPercent": 8.0,
+                "stockCount": 28
+            },
+               {
+                "name": "Product14",
+                "code": "Prod14",
+                "category": "Category14",
+                "costPrice": 18.5,
+                "sellingPrice": 25.0,
+                "taxPercent": 8.0,
+                "stockCount": 28
+            },
+             {
+                "name": "Product15",
+                "code": "Prod15",
+                "category": "Category15",
+                "costPrice": 18.5,
+                "sellingPrice": 25.0,
+                "taxPercent": 8.0,
+                "stockCount": 28
+            },
+             {
+                "name": "Product16",
+                "code": "Prod16",
+                "category": "Category16",
+                "costPrice": 18.5,
+                "sellingPrice": 25.0,
+                "taxPercent": 8.0,
+                "stockCount": 28
+            },
+             {
+                "name": "Product17",
+                "code": "Prod17",
+                "category": "Category17",
+                "costPrice": 18.5,
+                "sellingPrice": 25.0,
+                "taxPercent": 8.0,
+                "stockCount": 28
+            },
+             {
+                "name": "Product18",
+                "code": "Prod18",
+                "category": "Category18",
+                "costPrice": 18.5,
+                "sellingPrice": 25.0,
+                "taxPercent": 8.0,
+                "stockCount": 28
+            },
+             {
+                "name": "Product19",
+                "code": "Prod19",
+                "category": "Category19",
+                "costPrice": 18.5,
+                "sellingPrice": 25.0,
+                "taxPercent": 8.0,
+                "stockCount": 28
+            },
+             {
+                "name": "Product20",
+                "code": "Prod20",
+                "category": "Category20",
+                "costPrice": 18.5,
+                "sellingPrice": 25.0,
+                "taxPercent": 8.0,
+                "stockCount": 28
+            }
+        ]
+    }
+]
+
+
