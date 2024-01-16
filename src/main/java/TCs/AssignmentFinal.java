@@ -23,14 +23,14 @@ class AssignmentFinal {
 
 			if (j == 1) {
 
-				for (int i = 1; i <= 10; i++) {
-					String productName = "Store1_Product" + i;
-					String productCode = "Store1_Prod" + i;
-					String productCategory = "Category" + i;
-					float costPrice = 10 * i;
-					float sellingPrice = 20 * i;
-					float taxPercent = 5 * i;
-					int stockCount = 20 + i;
+				for (int i = 0; i < 10; i++) {
+					String productName = "Product" + (i+1);
+					String productCode = "ProdCode" + (i+1);
+					String productCategory = "Category" + (i+1);
+					float costPrice = 10 * (i+1);
+					float sellingPrice = 20 * (i+1);
+					float taxPercent = 5 * (i+1);
+					int stockCount = 20 + (i+1);
 
 					// Creating a new Product and adding it to the ArrayList
 					Product product = new Product(productName, productCode, productCategory, costPrice, sellingPrice,
@@ -39,14 +39,14 @@ class AssignmentFinal {
 				}
 			} else if (j == 2) {
 
-				for (int i = 1; i <= 10; i++) {
-					String productName = "Store2_Product" + i + j;
-					String productCode = "Store2_Prod" + i + j;
-					String productCategory = "Category" + i + j;
-					float costPrice = 10 * i + j;
-					float sellingPrice = 20 * i + j;
-					float taxPercent = 5 * i + j;
-					int stockCount = 20 + i + j;
+				for (int i = 0; i < 10; i++) {
+					String productName = "Product" + (i+11);
+					String productCode = "ProdCode" + (i+11);
+					String productCategory = "Category" +(i+11);
+					float costPrice = 10 * (i+11);
+					float sellingPrice = 20 * (i+11);
+					float taxPercent = 5 * (i+11);
+					int stockCount = 20 + (i+11);
 
 					// Creating a new Product and adding it to the ArrayList
 					Product product = new Product(productName, productCode, productCategory, costPrice, sellingPrice,
@@ -78,21 +78,21 @@ class AssignmentFinal {
 		
 		
 
-		String storeNameToSearch = "Store1";
-		String productCodeToSearch = "Store1_Prod9";
+//		String storeNameToSearch = "Store1";
+		String productCodeToSearch = "ProdCode11";
 
-		float price = getPriceByCodeInStore(pl, storeNameToSearch, productCodeToSearch);
-		int stockValue = getStockValueByCodeInStore(pl, storeNameToSearch, productCodeToSearch);
+		float price = getPriceByCodeInStore(pl,productCodeToSearch);
+		int stockValue = getStockValueByCodeInStore(pl, productCodeToSearch);
 
-		System.out.println("Price of product " + productCodeToSearch + " in store " + storeNameToSearch + ": " + price);
+		System.out.println("Price of product " + productCodeToSearch + " in store "  + ": " + price);
 		System.out.println(
-				"Stock value of product " + productCodeToSearch + " in store " + storeNameToSearch + ": " + stockValue);
+				"Stock value of product " + productCodeToSearch + " in store " +  ": " + stockValue);
 	}
 
 	// Creating a function to get price of product by code in a store
-	private static float getPriceByCodeInStore(ArrayList<Product> products, String storeName, String productCode) {
+	private static float getPriceByCodeInStore(ArrayList<Product> products, String productCode) {
 		for (Product product : products) {
-			if (product.name.contains(storeName) && product.code.equals(productCode)) {
+			if (product.code.equals(productCode)) {
 				return product.sellingPrice;
 			}
 		}
@@ -102,9 +102,9 @@ class AssignmentFinal {
 	
 	// Creating a function to get stock value of a product by code in a store
 	
-	private static int getStockValueByCodeInStore(ArrayList<Product> products, String storeName, String productCode) {
+	private static int getStockValueByCodeInStore(ArrayList<Product> products,  String productCode) {
 		for (Product product : products) {
-			if (product.name.contains(storeName) && product.code.equals(productCode)) {
+			if (product.code.equals(productCode)) {
 				return product.stockCount;
 			}
 		}
