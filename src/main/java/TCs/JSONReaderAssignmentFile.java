@@ -16,40 +16,30 @@ public class JSONReaderAssignmentFile {
            
             JsonNode rootNode = objectMapper.readTree(new File(filePath));
 
-            String storeNameToSearch = "Store1";
-            String productCodeToSearch = "Prod1";
+//            String storeNameToSearch = "Store1";
+            String productCodeToSearch = "Prod1"; // Provide the product code you want to search
 
-            
             Iterator<JsonNode> storesIterator = rootNode.elements();
             while (storesIterator.hasNext()) {
                 JsonNode storeNode = storesIterator.next();
 
-               
-                String storeName = storeNode.get("storeName").asText();
+                JsonNode productsNode = storeNode.get("products");
+                if (productsNode.isArray()) {
+                    Iterator<JsonNode> productsIterator = productsNode.elements();
+                    while (productsIterator.hasNext()) {
+                        JsonNode productNode = productsIterator.next();
 
-                if (storeName.equals(storeNameToSearch)) {
-                    
-                    JsonNode productsNode = storeNode.get("products");
-                    if (productsNode.isArray()) {
-                        Iterator<JsonNode> productsIterator = productsNode.elements();
-                        while (productsIterator.hasNext()) {
-                            JsonNode productNode = productsIterator.next();
+                        String productCode = productNode.get("code").asText();
 
-                           
-                            String productCode = productNode.get("code").asText();
-
-                            
-                            if (productCode.equals(productCodeToSearch)) {
-                             
-                            	displayDetails(storeName, productCode,
-                                        productNode.get("sellingPrice").asDouble());
-                                return;
-                            }
+                        if (productCode.equals(productCodeToSearch)) {
+                            displayDetails( productCode,
+                                    productNode.get("sellingPrice").asDouble());
+                            return;
                         }
                     }
                 }
             }
-      
+          
             System.out.println("No suhc code");
 
         } catch (Exception e) {
@@ -57,8 +47,8 @@ public class JSONReaderAssignmentFile {
         }
     }
 
-    private static void displayDetails(String storeName, String productCode, double sellingPrice) {
-        System.out.println("Store Name: " + storeName);
+    private static void displayDetails(String productCode, double sellingPrice) {
+//       
         System.out.println("Product Code: " + productCode);
         System.out.println("Selling Price: " + sellingPrice);
       
