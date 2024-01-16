@@ -17,7 +17,7 @@ public class JSONReaderAssignmentFile {
             JsonNode rootNode = objectMapper.readTree(new File(filePath));
 
 //            String storeNameToSearch = "Store1";
-            String productCodeToSearch = "Prod1"; // Provide the product code you want to search
+            String productCodeToSearch = "Prod1";
 
             Iterator<JsonNode> storesIterator = rootNode.elements();
             while (storesIterator.hasNext()) {
