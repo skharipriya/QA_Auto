@@ -34,6 +34,7 @@ public class JSONReaderAssignmentFile {
                         if (productCode.equals(productCodeToSearch)) {
                             displayDetails( productCode,
                                     productNode.get("sellingPrice").asDouble());
+                            displayStockdetails(productCode, productNode.get("stockCount").asDouble());
                             return;
                         }
                     }
@@ -52,5 +53,10 @@ public class JSONReaderAssignmentFile {
         System.out.println("Product Code: " + productCode);
         System.out.println("Selling Price: " + sellingPrice);
       
+    }
+
+       private static void displayStockdetails(String productCode,double stockCount) {
+//    	System.out.println("Product Code:"+ productCode);
+    	System.out.println("Stock count:"+ stockCount);
     }
 }
